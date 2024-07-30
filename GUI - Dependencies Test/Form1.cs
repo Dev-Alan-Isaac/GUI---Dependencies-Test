@@ -35,6 +35,10 @@ namespace GUI___Dependencies_Test
             this.SetStyle(ControlStyles.ResizeRedraw, true); // this is to avoid visual artifacts
             this.FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+
+            panel_Indicator.Height = button_Chart.Height;
+            panel_Indicator.Top = button_Chart.Top;
+            chart1.BringToFront();
         }
 
         private void button_Close_Click(object sender, EventArgs e)
@@ -81,6 +85,19 @@ namespace GUI___Dependencies_Test
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void button_Chart_Click(object sender, EventArgs e)
+        {
+            panel_Indicator.Height = button_Chart.Height;
+            panel_Indicator.Top = button_Chart.Top;
+            chart1.BringToFront();
+        }
+
+        private void button_Pictures_Click(object sender, EventArgs e)
+        {
+            panel_Indicator.Height = button_Chart.Height;
+            panel_Indicator.Top = button_Chart.Top;
         }
     }
 }

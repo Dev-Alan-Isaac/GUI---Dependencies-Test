@@ -38,9 +38,9 @@
             button8 = new Button();
             button3 = new Button();
             button4 = new Button();
-            button2 = new Button();
-            panel3 = new Panel();
-            button1 = new Button();
+            button_Pictures = new Button();
+            panel_Indicator = new Panel();
+            button_Chart = new Button();
             panel_Body = new Panel();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel_UpMenu = new Panel();
@@ -60,9 +60,9 @@
             panel_LateralMenu.Controls.Add(button8);
             panel_LateralMenu.Controls.Add(button3);
             panel_LateralMenu.Controls.Add(button4);
-            panel_LateralMenu.Controls.Add(button2);
-            panel_LateralMenu.Controls.Add(panel3);
-            panel_LateralMenu.Controls.Add(button1);
+            panel_LateralMenu.Controls.Add(button_Pictures);
+            panel_LateralMenu.Controls.Add(panel_Indicator);
+            panel_LateralMenu.Controls.Add(button_Chart);
             panel_LateralMenu.Dock = DockStyle.Left;
             panel_LateralMenu.Location = new Point(0, 0);
             panel_LateralMenu.Name = "panel_LateralMenu";
@@ -79,7 +79,7 @@
             button5.Name = "button5";
             button5.Size = new Size(213, 42);
             button5.TabIndex = 8;
-            button5.Text = "Video";
+            button5.Text = "WIP";
             button5.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -91,7 +91,7 @@
             button6.Name = "button6";
             button6.Size = new Size(213, 42);
             button6.TabIndex = 7;
-            button6.Text = "Video";
+            button6.Text = "WIP";
             button6.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -103,7 +103,7 @@
             button7.Name = "button7";
             button7.Size = new Size(213, 42);
             button7.TabIndex = 6;
-            button7.Text = "Video";
+            button7.Text = "WIP";
             button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -115,7 +115,7 @@
             button8.Name = "button8";
             button8.Size = new Size(213, 42);
             button8.TabIndex = 5;
-            button8.Text = "Video";
+            button8.Text = "WIP";
             button8.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -127,7 +127,7 @@
             button3.Name = "button3";
             button3.Size = new Size(213, 42);
             button3.TabIndex = 4;
-            button3.Text = "Video";
+            button3.Text = "WIP";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -139,40 +139,42 @@
             button4.Name = "button4";
             button4.Size = new Size(213, 42);
             button4.TabIndex = 3;
-            button4.Text = "Video";
+            button4.Text = "WIP";
             button4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button_Pictures
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(27, 60);
-            button2.Name = "button2";
-            button2.Size = new Size(213, 42);
-            button2.TabIndex = 2;
-            button2.Text = "Video";
-            button2.UseVisualStyleBackColor = true;
+            button_Pictures.FlatAppearance.BorderSize = 0;
+            button_Pictures.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
+            button_Pictures.FlatStyle = FlatStyle.Flat;
+            button_Pictures.Location = new Point(27, 60);
+            button_Pictures.Name = "button_Pictures";
+            button_Pictures.Size = new Size(213, 42);
+            button_Pictures.TabIndex = 2;
+            button_Pictures.Text = "Pictures";
+            button_Pictures.UseVisualStyleBackColor = true;
+            button_Pictures.Click += button_Pictures_Click;
             // 
-            // panel3
+            // panel_Indicator
             // 
-            panel3.BackColor = SystemColors.MenuHighlight;
-            panel3.Location = new Point(3, 12);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(18, 42);
-            panel3.TabIndex = 1;
+            panel_Indicator.BackColor = SystemColors.MenuHighlight;
+            panel_Indicator.Location = new Point(3, 12);
+            panel_Indicator.Name = "panel_Indicator";
+            panel_Indicator.Size = new Size(18, 42);
+            panel_Indicator.TabIndex = 1;
             // 
-            // button1
+            // button_Chart
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(27, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(213, 42);
-            button1.TabIndex = 0;
-            button1.Text = "Video";
-            button1.UseVisualStyleBackColor = true;
+            button_Chart.FlatAppearance.BorderSize = 0;
+            button_Chart.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
+            button_Chart.FlatStyle = FlatStyle.Flat;
+            button_Chart.Location = new Point(27, 12);
+            button_Chart.Name = "button_Chart";
+            button_Chart.Size = new Size(213, 42);
+            button_Chart.TabIndex = 0;
+            button_Chart.Text = "Chart";
+            button_Chart.UseVisualStyleBackColor = true;
+            button_Chart.Click += button_Chart_Click;
             // 
             // panel_Body
             // 
@@ -250,8 +252,8 @@
 
         private Panel panel_LateralMenu;
         private Panel panel_Body;
-        private Panel panel3;
-        private Button button1;
+        private Panel panel_Indicator;
+        private Button button_Chart;
         private Panel panel_UpMenu;
         private Button button_Close;
         private Button button5;
@@ -260,7 +262,7 @@
         private Button button8;
         private Button button3;
         private Button button4;
-        private Button button2;
+        private Button button_Pictures;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
