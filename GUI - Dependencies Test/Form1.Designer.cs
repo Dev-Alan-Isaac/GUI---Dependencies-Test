@@ -41,7 +41,7 @@
             // 
             // panel_LateralMenu
             // 
-            panel_LateralMenu.BackColor = SystemColors.ControlDark;
+            panel_LateralMenu.BackColor = SystemColors.Menu;
             panel_LateralMenu.Controls.Add(panel3);
             panel_LateralMenu.Controls.Add(button1);
             panel_LateralMenu.Dock = DockStyle.Left;
@@ -49,10 +49,11 @@
             panel_LateralMenu.Name = "panel_LateralMenu";
             panel_LateralMenu.Size = new Size(246, 781);
             panel_LateralMenu.TabIndex = 0;
+            panel_LateralMenu.MouseDown += panel_LateralMenu_MouseDown;
             // 
             // panel3
             // 
-            panel3.BackColor = SystemColors.ActiveCaption;
+            panel3.BackColor = SystemColors.MenuHighlight;
             panel3.Location = new Point(3, 12);
             panel3.Name = "panel3";
             panel3.Size = new Size(18, 42);
@@ -61,6 +62,7 @@
             // button1
             // 
             button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(27, 12);
             button1.Name = "button1";
@@ -71,30 +73,35 @@
             // 
             // panel_Body
             // 
-            panel_Body.BackColor = SystemColors.ControlDarkDark;
+            panel_Body.BackColor = SystemColors.Window;
             panel_Body.Controls.Add(panel_UpMenu);
             panel_Body.Dock = DockStyle.Fill;
             panel_Body.Location = new Point(246, 0);
             panel_Body.Name = "panel_Body";
             panel_Body.Size = new Size(1107, 781);
             panel_Body.TabIndex = 1;
+            panel_Body.MouseDown += panel_Body_MouseDown;
             // 
             // panel_UpMenu
             // 
+            panel_UpMenu.BackColor = SystemColors.MenuBar;
             panel_UpMenu.Controls.Add(button_Close);
             panel_UpMenu.Dock = DockStyle.Top;
             panel_UpMenu.Location = new Point(0, 0);
             panel_UpMenu.Name = "panel_UpMenu";
             panel_UpMenu.Size = new Size(1107, 54);
             panel_UpMenu.TabIndex = 0;
+            panel_UpMenu.MouseDown += panel_UpMenu_MouseDown;
             // 
             // button_Close
             // 
+            button_Close.Dock = DockStyle.Right;
             button_Close.FlatAppearance.BorderSize = 0;
+            button_Close.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 0, 0);
             button_Close.FlatStyle = FlatStyle.Flat;
-            button_Close.Location = new Point(1039, 3);
+            button_Close.Location = new Point(1051, 0);
             button_Close.Name = "button_Close";
-            button_Close.Size = new Size(65, 48);
+            button_Close.Size = new Size(56, 54);
             button_Close.TabIndex = 0;
             button_Close.Text = "X";
             button_Close.UseVisualStyleBackColor = true;
@@ -110,6 +117,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
+            MouseDown += Form1_MouseDown;
             panel_LateralMenu.ResumeLayout(false);
             panel_Body.ResumeLayout(false);
             panel_UpMenu.ResumeLayout(false);
