@@ -38,7 +38,7 @@ namespace GUI___Dependencies_Test
 
             panel_Indicator.Height = button_Chart.Height;
             panel_Indicator.Top = button_Chart.Top;
-            chart1.BringToFront();
+            charts1.BringToFront();
         }
 
         private void button_Close_Click(object sender, EventArgs e)
@@ -91,13 +91,14 @@ namespace GUI___Dependencies_Test
         {
             panel_Indicator.Height = button_Chart.Height;
             panel_Indicator.Top = button_Chart.Top;
-            chart1.BringToFront();
+            charts1.BringToFront();
         }
 
         private void button_Pictures_Click(object sender, EventArgs e)
         {
-            panel_Indicator.Height = button_Chart.Height;
-            panel_Indicator.Top = button_Chart.Top;
+            panel_Indicator.Height = button_Pictures.Height;
+            panel_Indicator.Top = button_Pictures.Top;
+            pictures1.BringToFront();
         }
     }
 }

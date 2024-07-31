@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel_LateralMenu = new Panel();
             button5 = new Button();
             button6 = new Button();
@@ -42,12 +39,12 @@
             panel_Indicator = new Panel();
             button_Chart = new Button();
             panel_Body = new Panel();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel_UpMenu = new Panel();
             button_Close = new Button();
+            charts1 = new Charts();
+            pictures1 = new Pictures();
             panel_LateralMenu.SuspendLayout();
             panel_Body.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             panel_UpMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -179,7 +176,8 @@
             // panel_Body
             // 
             panel_Body.BackColor = SystemColors.Window;
-            panel_Body.Controls.Add(chart1);
+            panel_Body.Controls.Add(pictures1);
+            panel_Body.Controls.Add(charts1);
             panel_Body.Controls.Add(panel_UpMenu);
             panel_Body.Dock = DockStyle.Fill;
             panel_Body.Location = new Point(246, 0);
@@ -187,23 +185,6 @@
             panel_Body.Size = new Size(1107, 781);
             panel_Body.TabIndex = 1;
             panel_Body.MouseDown += panel_Body_MouseDown;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            chart1.Dock = DockStyle.Fill;
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
-            chart1.Location = new Point(0, 54);
-            chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart1.Series.Add(series1);
-            chart1.Size = new Size(1107, 727);
-            chart1.TabIndex = 1;
-            chart1.Text = "chart1";
             // 
             // panel_UpMenu
             // 
@@ -230,6 +211,22 @@
             button_Close.UseVisualStyleBackColor = true;
             button_Close.Click += button_Close_Click;
             // 
+            // charts1
+            // 
+            charts1.Dock = DockStyle.Fill;
+            charts1.Location = new Point(0, 54);
+            charts1.Name = "charts1";
+            charts1.Size = new Size(1107, 727);
+            charts1.TabIndex = 1;
+            // 
+            // pictures1
+            // 
+            pictures1.Dock = DockStyle.Fill;
+            pictures1.Location = new Point(0, 54);
+            pictures1.Name = "pictures1";
+            pictures1.Size = new Size(1107, 727);
+            pictures1.TabIndex = 2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -243,7 +240,6 @@
             MouseDown += Form1_MouseDown;
             panel_LateralMenu.ResumeLayout(false);
             panel_Body.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             panel_UpMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -263,6 +259,7 @@
         private Button button3;
         private Button button4;
         private Button button_Pictures;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Pictures pictures1;
+        private Charts charts1;
     }
 }
