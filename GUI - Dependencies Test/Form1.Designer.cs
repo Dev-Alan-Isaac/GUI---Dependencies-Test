@@ -39,10 +39,10 @@
             panel_Indicator = new Panel();
             button_Chart = new Button();
             panel_Body = new Panel();
+            pictures1 = new Pictures();
+            charts1 = new Charts();
             panel_UpMenu = new Panel();
             button_Close = new Button();
-            charts1 = new Charts();
-            pictures1 = new Pictures();
             panel_LateralMenu.SuspendLayout();
             panel_Body.SuspendLayout();
             panel_UpMenu.SuspendLayout();
@@ -186,6 +186,22 @@
             panel_Body.TabIndex = 1;
             panel_Body.MouseDown += panel_Body_MouseDown;
             // 
+            // pictures1
+            // 
+            pictures1.Dock = DockStyle.Fill;
+            pictures1.Location = new Point(0, 54);
+            pictures1.Name = "pictures1";
+            pictures1.Size = new Size(1107, 727);
+            pictures1.TabIndex = 2;
+            // 
+            // charts1
+            // 
+            charts1.Dock = DockStyle.Fill;
+            charts1.Location = new Point(0, 54);
+            charts1.Name = "charts1";
+            charts1.Size = new Size(1107, 727);
+            charts1.TabIndex = 1;
+            // 
             // panel_UpMenu
             // 
             panel_UpMenu.BackColor = SystemColors.MenuBar;
@@ -210,22 +226,6 @@
             button_Close.Text = "X";
             button_Close.UseVisualStyleBackColor = true;
             button_Close.Click += button_Close_Click;
-            // 
-            // charts1
-            // 
-            charts1.Dock = DockStyle.Fill;
-            charts1.Location = new Point(0, 54);
-            charts1.Name = "charts1";
-            charts1.Size = new Size(1107, 727);
-            charts1.TabIndex = 1;
-            // 
-            // pictures1
-            // 
-            pictures1.Dock = DockStyle.Fill;
-            pictures1.Location = new Point(0, 54);
-            pictures1.Name = "pictures1";
-            pictures1.Size = new Size(1107, 727);
-            pictures1.TabIndex = 2;
             // 
             // Form1
             // 
