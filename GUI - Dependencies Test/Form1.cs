@@ -100,5 +100,12 @@ namespace GUI___Dependencies_Test
             panel_Indicator.Top = button_Pictures.Top;
             pictures1.BringToFront();
         }
+
+        private void button_Table_Click(object sender, EventArgs e)
+        {
+            panel_Indicator.Height = button_Table.Height;
+            panel_Indicator.Top = button_Table.Top;
+            tables1.BringToFront();
+        }
     }
 }

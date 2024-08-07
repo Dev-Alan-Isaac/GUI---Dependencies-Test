@@ -34,7 +34,7 @@
             button7 = new Button();
             button8 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            button_Table = new Button();
             button_Pictures = new Button();
             panel_Indicator = new Panel();
             button_Chart = new Button();
@@ -43,6 +43,7 @@
             charts1 = new Charts();
             panel_UpMenu = new Panel();
             button_Close = new Button();
+            tables1 = new Tables();
             panel_LateralMenu.SuspendLayout();
             panel_Body.SuspendLayout();
             panel_UpMenu.SuspendLayout();
@@ -56,7 +57,7 @@
             panel_LateralMenu.Controls.Add(button7);
             panel_LateralMenu.Controls.Add(button8);
             panel_LateralMenu.Controls.Add(button3);
-            panel_LateralMenu.Controls.Add(button4);
+            panel_LateralMenu.Controls.Add(button_Table);
             panel_LateralMenu.Controls.Add(button_Pictures);
             panel_LateralMenu.Controls.Add(panel_Indicator);
             panel_LateralMenu.Controls.Add(button_Chart);
@@ -127,17 +128,18 @@
             button3.Text = "WIP";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button_Table
             // 
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(27, 108);
-            button4.Name = "button4";
-            button4.Size = new Size(213, 42);
-            button4.TabIndex = 3;
-            button4.Text = "WIP";
-            button4.UseVisualStyleBackColor = true;
+            button_Table.FlatAppearance.BorderSize = 0;
+            button_Table.FlatAppearance.MouseOverBackColor = SystemColors.HotTrack;
+            button_Table.FlatStyle = FlatStyle.Flat;
+            button_Table.Location = new Point(27, 108);
+            button_Table.Name = "button_Table";
+            button_Table.Size = new Size(213, 42);
+            button_Table.TabIndex = 3;
+            button_Table.Text = "Tables";
+            button_Table.UseVisualStyleBackColor = true;
+            button_Table.Click += button_Table_Click;
             // 
             // button_Pictures
             // 
@@ -176,6 +178,7 @@
             // panel_Body
             // 
             panel_Body.BackColor = SystemColors.Window;
+            panel_Body.Controls.Add(tables1);
             panel_Body.Controls.Add(pictures1);
             panel_Body.Controls.Add(charts1);
             panel_Body.Controls.Add(panel_UpMenu);
@@ -227,6 +230,14 @@
             button_Close.UseVisualStyleBackColor = true;
             button_Close.Click += button_Close_Click;
             // 
+            // tables1
+            // 
+            tables1.Dock = DockStyle.Fill;
+            tables1.Location = new Point(0, 54);
+            tables1.Name = "tables1";
+            tables1.Size = new Size(1107, 727);
+            tables1.TabIndex = 1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -257,9 +268,10 @@
         private Button button7;
         private Button button8;
         private Button button3;
-        private Button button4;
+        private Button button_Table;
         private Button button_Pictures;
         private Pictures pictures1;
         private Charts charts1;
+        private Tables tables1;
     }
 }
